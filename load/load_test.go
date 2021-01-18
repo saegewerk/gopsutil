@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/shirou/gopsutil/internal/common"
+	"github.com/saegewerk/gopsutil/internal/common"
 )
 
 func skipIfNotImplementedErr(t testing.TB, err error) {

@@ -7,9 +7,9 @@ import (
 	"context"
 	"encoding/binary"
 
-	"github.com/shirou/gopsutil/cpu"
-	"github.com/shirou/gopsutil/internal/common"
-	"github.com/shirou/gopsutil/net"
+	"github.com/saegewerk/gopsutil/cpu"
+	"github.com/saegewerk/gopsutil/internal/common"
+	"github.com/saegewerk/gopsutil/net"
 )
 
 type MemoryInfoExStat struct{}

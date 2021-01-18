@@ -8,7 +8,7 @@ import (
 	"unsafe"
 
 	"github.com/StackExchange/wmi"
-	"github.com/shirou/gopsutil/v3/internal/common"
+	"github.com/saegewerk/gopsutil/v3/internal/common"
 	"golang.org/x/sys/windows"
 )
 
@@ -112,14 +112,15 @@ func InfoWithContext(ctx context.Context) ([]InfoStat, error) {
 		}
 
 		cpu := InfoStat{
-			CPU:        int32(i),
-			Family:     fmt.Sprintf("%d", l.Family),
-			VendorID:   l.Manufacturer,
-			ModelName:  l.Name,
-			Cores:      int32(l.NumberOfLogicalProcessors),
-			PhysicalID: procID,
-			Mhz:        float64(l.MaxClockSpeed),
-			Flags:      []string{},
+			CPU:          int32(i),
+			Family:       fmt.Sprintf("%d", l.Family),
+			VendorID:     l.Manufacturer,
+			ModelName:    l.Name,
+			Cores:        int32(l.NumberOfCores),
+			LogicalCores: int32(l.NumberOfLogicalProcessors),
+			PhysicalID:   procID,
+			Mhz:          float64(l.MaxClockSpeed),
+			Flags:        []string{},
 		}
 		ret = append(ret, cpu)
 	}

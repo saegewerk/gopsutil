@@ -14,7 +14,7 @@ import "C"
 import (
 	"context"
 
-	"github.com/shirou/gopsutil/internal/common"
+	"github.com/saegewerk/gopsutil/internal/common"
 )
 
 func IOCountersWithContext(ctx context.Context, names ...string) (map[string]IOCountersStat, error) {

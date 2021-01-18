@@ -9,7 +9,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/shirou/gopsutil/internal/common"
+	"github.com/saegewerk/gopsutil/internal/common"
 	"golang.org/x/sys/windows"
 )
 

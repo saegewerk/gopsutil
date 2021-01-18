@@ -7,8 +7,8 @@ import (
 	"context"
 	"encoding/binary"
 
-	"github.com/shirou/gopsutil/v3/cpu"
-	"github.com/shirou/gopsutil/v3/internal/common"
+	"github.com/saegewerk/gopsutil/v3/cpu"
+	"github.com/saegewerk/gopsutil/v3/internal/common"
 )
 
 type MemoryInfoExStat struct{}
@@ -73,4 +73,3 @@ func parseKinfoProc(buf []byte) (KinfoProc, error) {
 	err := common.Read(br, binary.LittleEndian, &k)
 	return k, err
 }
-
